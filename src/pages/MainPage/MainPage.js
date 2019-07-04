@@ -10,27 +10,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
 import LargeCarousel from '../../components/LargeCarousel';
 import Header from '../../components/Header';
 import PopularProductsGrid from '../../components/PopularProductsGrid';
 import ImageGridList from '../../components/ImageGridList';
 import Footer from '../../components/Footer';
-import SnackNotifications from '../../components/SnackNotifications';
 import MainPageBodyTabs from '../../components/MainPageBodyTabs';
 import MainPageVehicleGrid from '../../components/MainPageVehicleGrid'
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -60,7 +47,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
   const classes = useStyles();
@@ -103,27 +89,15 @@ export default function Album() {
 
         <Container className={classes.cardGrid} maxWidth="lg">
         <MainPageBodyTabs />
-
         </Container>
-
         <div className={classes.whiteBackGroundContent}>
           <Container maxWidth="lg">
           <ImageGridList />
           </Container>
         </div>
       </main>
-      <SnackNotifications  />
       {/* Footer */}
       <Footer />
-      {/* <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography>
-        <MadeWithLove />
-      </footer> */}
       {/* End footer */}
     </React.Fragment>
   );
