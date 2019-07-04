@@ -13,7 +13,8 @@ import LogoButton from '../LogoButton';
 import GarageTooltip from './GarageTooltip';
 import AccountTooltip from './AccountTooltip'
 import CartTooltip from './CartTooltip';
-import HeaderTabs from './HeaderTabs'
+import HeaderTabs from './HeaderTabs';
+import SearchFieldContainer from '../../components/Header/SearchFieldContainer';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -99,7 +100,8 @@ export default function Header(props) {
           <LogoButton className={classes.title} noWrap/>
 
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
+          <SearchFieldContainer />
+            {/* <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
@@ -109,7 +111,7 @@ export default function Header(props) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'Search' }}
-            />
+            /> */}
           </div>
           <div className={classes.grow} />
 
