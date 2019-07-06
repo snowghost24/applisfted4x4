@@ -6,6 +6,11 @@
   "repository": "https://github.com/snowghost24/lifted4x4parts.git",
   "author": "\"Snowghost24 <jguzman24680@gmail.com>\"",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.5.0",
+    "npm": ">=6.9.0",
+    "yarn": ">=1.16.0"
+  },
   "scripts": {
     "client-install": "cd client && npm install",
     "server": "nodemon server.js",
